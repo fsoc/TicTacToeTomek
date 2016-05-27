@@ -8,23 +8,30 @@ import java.io.FileInputStream;
 import java.io.File;
 import java.io.IOException;
 import java.lang.StringBuilder;
-import java.util.Collection;
-import java.util.ArrayList;
 import java.io.ByteArrayOutputStream;
 
 public class TicTacToeTomekTest {
 
   @Test
-  public void integrationTest() throws IOException {
-    File inFile = new File("./samples/A-small-practice.in");
-    File outFile = new File("./samples/A-small-practice.out");
+  public void smallIntegrationTest() throws IOException {
+    testFiles("./samples/A-small-practice.in", "./samples/A-small-practice.out");
+  }
+
+  @Test
+  public void largeIntegrationTest() throws IOException {
+    testFiles("./samples/A-large-practice.in", "./samples/A-large-practice.out");
+  }
+
+  private void testFiles(String in, String out) throws IOException {
+    File inFile = new File(in);
+    File outFile = new File(out);
     InputStream inStream = new FileInputStream(inFile.toString());
     InputStream outStream = new FileInputStream(outFile.toString());
 
     String outString = streamToString(outStream);
 
     OutputStream output = new ByteArrayOutputStream();
-    TicTacToeTomek.processBoard(inStream, output);
+    TicTacToeTomek.processBoards(inStream, output);
     String programAnswer = output.toString();
 
     assertEquals(outString.replace("\n",""), programAnswer.replace("\n",""));
