@@ -8,9 +8,6 @@ import static org.mockito.Matchers.any;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
-/**
- *
- */
 public class CalculatorTest {
   private BoardCounter bc;
 
@@ -22,7 +19,7 @@ public class CalculatorTest {
   @Test
   public void XWonTest() {
     when(bc.getRows(Sign.X)).thenReturn(new int[]{3, 2, 1});
-    assertEquals("X won", Calculator.process(bc, 3));
+    assertEquals("X won", Calculator.process(bc));
   }
 
   @Test
@@ -30,7 +27,7 @@ public class CalculatorTest {
     when(bc.getRows(Sign.X)).thenReturn(new int[]{1, 2, 1});
     when(bc.getCols(Sign.X)).thenReturn(new int[]{1, 2, 1});
     when(bc.getDiags(Sign.X)).thenReturn(new int[]{3, 0});
-    assertEquals("X won", Calculator.process(bc, 3));
+    assertEquals("X won", Calculator.process(bc));
   }
 
   @Test
@@ -39,6 +36,6 @@ public class CalculatorTest {
     when(bc.getCols(any())).thenReturn(new int[]{0, 0, 0});
     when(bc.getDiags(any())).thenReturn(new int[]{0, 0});
     when(bc.hasUnsetElements()).thenReturn(false);
-    assertEquals("Draw", Calculator.process(bc, 3));
+    assertEquals("Draw", Calculator.process(bc));
   }
 }
