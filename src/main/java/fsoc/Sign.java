@@ -8,7 +8,7 @@ public enum Sign {
 
   private final int value;
 
-  private Sign(int value) {
+  Sign(int value) {
     this.value = value;
   }
 

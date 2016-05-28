@@ -40,7 +40,7 @@ public class TicTacToeTomekTest {
     outStream.close();
   }
 
-  static String streamToString(java.io.InputStream is) throws IOException {
+  private static String streamToString(java.io.InputStream is) throws IOException {
     StringBuilder builder = new StringBuilder();
     int ch;
     while ((ch = is.read()) != -1){

@@ -7,8 +7,11 @@ import java.io.InputStream;
 import java.io.OutputStream;
 
 
-public class TicTacToeTomek {
-  private static final int N = 4;
+/**
+ *
+ */
+class TicTacToeTomek {
+  private static final int N = 4; // Size of the board
 
   public static void main(String[] args) {
     processBoards(System.in, System.out);
@@ -33,7 +36,6 @@ public class TicTacToeTomek {
   }
 
   private static String processBoard(char[][] board) {
-    //TODO: check the N variable
     BoardCounter boardCounter = new BoardCounter(N);
 
     for (int i = 0; i < board.length; i++) {
