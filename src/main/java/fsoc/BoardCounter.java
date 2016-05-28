@@ -3,18 +3,15 @@ package fsoc;
 /**
  *
  */
-public class BoardCounter {
-  private final int size; // Size of a quadratic board
-
+class BoardCounter {
   // Arrays containing counter of X and O elements in rows, columns and diagonals.
   // The first dimension is the row/col/diag number and the second is 0 fo X and 1 for O
-  private int[][] rowElements;
-  private int[][] colElements;
-  private int[][] diagElements;
+  private final int[][] rowElements;
+  private final int[][] colElements;
+  private final int[][] diagElements;
   private boolean hasUnsetElements = false;
 
   public BoardCounter(int size) {
-    this.size = size;
     rowElements = new int[2][size];
     colElements = new int[2][size];
     diagElements = new int[2][2];
