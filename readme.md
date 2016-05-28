@@ -14,6 +14,9 @@ Given a 4 x 4 board description containing 'X', 'O', 'T' and '.' characters (whe
 
 If there are empty cells, and the game is not over, you should output "Game has not completed", even if the outcome of the game is inevitable.
 
+## design notes
+The class TicTacToeTomek is reponsible for parsing and IO. It parses every element of a board into an instance of BoardCounter which it then sends to the Calculator class which calculates the outcome.
+
 ## compile
     mvn package
 

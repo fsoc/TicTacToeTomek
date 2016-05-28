@@ -1,15 +1,16 @@
 package fsoc;
 
 /**
- *
+ * Keeps track of the different counters of a board. The number of X and O elements in every row, column and diagonal
+ * can be entered.
  */
 class BoardCounter {
   // Arrays containing counter of X and O elements in rows, columns and diagonals.
-  // The first dimension is the row/col/diag number and the second is 0 fo X and 1 for O
+  // The first dimension is 0 fo X and 1 for Oand the second is the row/col/diag number
   private final int[][] rowElements;
   private final int[][] colElements;
   private final int[][] diagElements;
-  private boolean hasUnsetElements = false;
+  private boolean hasUnsetElements = false; // Becomes true if the sign '.' i entered
 
   public BoardCounter(int size) {
     rowElements = new int[2][size];

@@ -1,7 +1,7 @@
 package fsoc;
 
 /**
- *
+ * Enumerator for the two signs X and O.
  */
 public enum Sign {
   X(0), O(1);
