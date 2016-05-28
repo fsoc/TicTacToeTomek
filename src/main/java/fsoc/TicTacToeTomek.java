@@ -1,15 +1,11 @@
-/**
- * https://code.google.com/codejam/contest/2270488/dashboard
- * The main class, responsible for parsing and IO for the boards.
- */
-
 package fsoc;
+
 import java.io.InputStream;
 import java.io.OutputStream;
 
-
 /**
- *
+ * https://code.google.com/codejam/contest/2270488/dashboard
+ * The main class, responsible for parsing and IO for the boards.
  */
 class TicTacToeTomek {
 
